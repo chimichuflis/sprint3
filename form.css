@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+input {
+  font-family: "Space Grotesk", sans-serif;
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 4fr 1fr 1.5fr 4.5fr 2fr;
+  grid-template-rows: 2fr 3fr 3fr 2fr;
+  background-image: url(./res/bg-main-desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+form {
+  grid-column: 6;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  opacity: 0.5;
+}
+input:focus {
+  border: 1px solid hsl(278, 94%, 30%);
+  outline: none;
+}
+label {
+  padding: 0.3rem 0;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+}
+img {
+  width: 100%;
+}
+#submit-button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  opacity: 1;
+  border: none;
+  border-radius: 6px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+.card-front {
+  position: relative;
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  align-self: end;
+  margin-bottom: 1.5rem;
+}
+.error {
+  color: transparent;
+}
+.card-logo {
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  width: 20%;
+}
+.card-back {
+  position: relative;
+  grid-column: 3 / span 2;
+  grid-row: 3 / 4;
+}
+.small-flex {
+  width: 24%;
+}
+.medium-flex {
+  width: 49%;
+}
+#card-name {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  bottom: 3rem;
+}
+#card-number {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  bottom: 2rem;
+}
+#card-cvc {
+  position: absolute;
+  right: 2rem;
+  color: black;
+  top: 35%;
+}
+/*
+input[type="number"] {
+  
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+*/
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr 5fr;
+    background-image: url(./res/bg-main-mobile.png);
+    padding: 2rem;
+  }
+  form {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+  }
+  #submit-button {
+    padding: 1rem;
+  }
+  .card-front {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    z-index: 100;
+  }
+  .card-back {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+  }
+}

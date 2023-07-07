@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+    </style>
+    <script src="form.js" defer></script>
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <div class="card-front">
+        <img src="./res/bg-card-front.png" alt="" />
+        <img class="card-logo" src="./res/card-logo.svg" />
+        <p id="card-name">nombre apellido</p>
+        <p id="card-number">0000 0000 0000 0000</p>
+      </div>
+
+      <div class="card-back">
+        <img src="./res/bg-card-back.png" alt="" />
+        <p id="card-cvc">000</p>
+      </div>
+
+      <form id="form">
+        <label
+          >CARDHOLDER NAME
+          <span class="error" id="name-error">Invalid name!</span></label
+        >
+        <input id="input-name" type="text" placeholder="e.g. Jane Appleseed" />
+        <label for=""
+          >CARD NUMBER
+          <span class="error" id="number-error">Invalid Number!</span></label
+        >
+        <input
+          id="input-number"
+          type="number"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <label class="medium-flex" for=""
+          >EXP.DATE (MM/YY)
+          <span class="error" id="date-error"> Invalid date!</span></label
+        >
+        <label class="medium-flex"
+          >CVC <span class="error" id="cvc-error"> Invalid!</span></label
+        >
+        <input
+          id="input-exp-month"
+          class="small-flex"
+          type="number"
+          placeholder="MM"
+        />
+        <input
+          id="input-exp-year"
+          class="small-flex"
+          type="number"
+          placeholder="YY"
+        />
+        <input
+          id="input-cvc"
+          class="medium-flex"
+          type="number"
+          placeholder="e.g. 123"
+        />
+        <input id="submit-button" type="submit" value="confirm" />
+      </form>
+    </main>
+  </body>
+</html>
